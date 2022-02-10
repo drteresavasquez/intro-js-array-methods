@@ -1,4 +1,5 @@
 import { card } from "../components/card.js";
+import { tableRow } from "../components/table.js";
 import { referenceList } from "../data/reference.js";
 import { renderToDom } from "../utils/renderToDom.js";
 
@@ -60,6 +61,23 @@ const buttonFilter = (event) => {
   if(event.target.id.includes('clearFilter')) {
     renderCards(referenceList);
   }
+  if(event.target.id.includes('productList')) {
+    let table = `<table class="table table-dark table-striped" style="width: 600px">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    `;
+    productList().forEach(item => {
+      table += tableRow(item);
+    })
+    table += `</tbody></table>`
+
+    renderToDom('#cards', table);
+  }
 }
 
 // .reduce()
@@ -70,6 +88,9 @@ const cartTotal = () => {
 }
 
 // .map()
+const productList = () => {
+  return referenceList.map(item => ({ title: item.title, price: item.price}));
+}
 
 
 // ******* SAVE FOR CONNECTING IT ALL TOGETHER ******
