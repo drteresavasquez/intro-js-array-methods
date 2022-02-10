@@ -26,7 +26,7 @@ const search = (event) => {
 }
 
 // BUTTON FILTER
-// .filter() & .reduce()
+// .filter() & .reduce() &.sort() - chaining
 const buttonFilter = (event) => {
   if(event.target.id.includes('free')) {
     console.log('FREE')
