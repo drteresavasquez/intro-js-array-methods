@@ -1,4 +1,5 @@
 import { card } from "../components/card.js";
+import { tableRow } from "../components/table.js";
 import { referenceList } from "../data/reference.js";
 import { renderToDom } from "../utils/renderToDom.js";
 
@@ -42,15 +43,12 @@ const buttonFilter = (event) => {
     cartList();
   }
   if(event.target.id.includes('productList')) {
-    let table = `<table class="table table-dark table-striped" style="width: 600px">
-    <thead>
-      <tr>
-        <th scope="col">Title</th>
-        <th scope="col">Price</th>
-      </tr>
-    </thead>
-    <tbody>
-    `;
+    let table = `<table class="table table-dark table-striped" style="width: 600px"><thead><tr><th scope="col">Title</th><th scope="col">Price</th></tr></thead><tbody>`;
+
+    productList().forEach(item => {
+      table += tableRow(item);
+    });
+
     table += `</tbody></table>`
 
     renderToDom('#cards', table);
@@ -64,9 +62,10 @@ const cartTotal = () => {
   document.querySelector("#cartTotal").innerHTML = total.toFixed(2);
 }
 
+// RESHAPE DATA TO RENDER TO DOM
 // .map()
 const productList = () => {
-  return console.log('Cart List!')
+  return [{ title: "SAMPLE TITLE", price: 44.00}]
 }
 
 
