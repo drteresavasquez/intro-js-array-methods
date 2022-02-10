@@ -1,5 +1,5 @@
 # Intro to JS Array Methods 
-In this repo, we will be working through increasing knowledge in JS array methods by refactoring a Black Excellence Reference app.
+In this repo, we will be working through increasing knowledge in JS array methods by refactoring an app that is a compiled Black Excellence Reference.
 
 ## What are JS Array Methods? 👀
 Array methods are functions that are built-in to JavaScript that can be applied to arrays.
