@@ -3,7 +3,7 @@ export const referenceList = [
     id: 1,
     title: "HBCU Info",
     author: "Wikipedia",
-    price: 0.00,
+    price: 22.22,
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Institute_for_Colored_Youth_Building_Historical_Marker_915_Bainbridge_St_Philadelphia_PA_%28DSC_2640%29.jpg/1920px-Institute_for_Colored_Youth_Building_Historical_Marker_915_Bainbridge_St_Philadelphia_PA_%28DSC_2640%29.jpg",
     youTubeId: "",
     type: "info",

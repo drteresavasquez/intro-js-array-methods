@@ -2,6 +2,7 @@ import { card } from "../components/card.js";
 import { referenceList } from "../data/reference.js";
 import { renderToDom } from "../utils/renderToDom.js";
 
+// Reusable function to get the cards on the DOM
 // .forEach()
 const renderCards = (array) => {
   let refStuff = "";
@@ -19,16 +20,54 @@ const toggleCart = (event) => {
     const [,id] = event.target.id.split('--');
 
     const index = referenceList.findIndex(item => item.id === Number(id));
+
+    // Toggle/Update the value of inCart
     referenceList[index].inCart = !referenceList[index].inCart
+    cartTotal();
     renderCards(referenceList);
   }
 }
 
-// .includes()
+// SEARCH
+// .includes() & .filter()
+const search = (event) => {
+  const eventLC = event.target.value.toLowerCase();
+  const searchResult = referenceList.filter(item => 
+    item.title.toLowerCase().includes(eventLC) || 
+    item.author.toLowerCase().includes(eventLC) || 
+    item.description.toLowerCase().includes(eventLC)
+  );
+  
+  renderCards(searchResult);
+}
 
-// .filter()
+// BUTTON FILTER
+// .filter() & .reduce()
+const buttonFilter = (event) => {
+  if(event.target.id.includes('free')) {
+    const free = referenceList.filter(item => item.price <= 0);
+    renderCards(free);
+  }
+
+  if(event.target.id.includes('cartFilter')) {
+    const cart = referenceList.filter(item => item.inCart);
+    renderCards(cart);
+  }
+  if(event.target.id.includes('books')) {
+    const books = referenceList.filter(item => item.type.toLowerCase() === 'book');
+    renderCards(books);
+  }
+  if(event.target.id.includes('clearFilter')) {
+    renderCards(referenceList);
+  }
+}
 
 // .reduce()
+const cartTotal = () => {
+  const cart = referenceList.filter(item => item.inCart);
+  const total = cart.reduce((a,b) => a + b.price, 0);
+  document.querySelector("#cartTotal").innerHTML = total.toFixed(2);
+}
 
 // .map()
 
@@ -37,8 +76,14 @@ const toggleCart = (event) => {
 const startApp = () => {
   // PUT ALL CARDS ON THE DOM
   renderCards(referenceList)
-
+  cartTotal();
   // SELECT THE CARD DIV
   document.querySelector('#cards').addEventListener('click', toggleCart);
+
+  // SELECT THE SEARCH INPUT
+  document.querySelector('#searchInput').addEventListener('keyup', search)
+
+  // SELECT BUTTON ROW DIV
+  document.querySelector('#btnRow').addEventListener('click', buttonFilter);
 }
 startApp();
