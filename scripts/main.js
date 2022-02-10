@@ -44,8 +44,17 @@ const buttonFilter = (event) => {
     cartList();
   }
   if(event.target.id.includes('productList')) {
-    let table = `<table class="table table-dark table-striped" style="width: 600px"><thead><tr><th scope="col">Title</th><th scope="col">Price</th></tr></thead><tbody>`;
-
+    let table = `<table class="table table-dark table-striped" style="width: 600px">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Type</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    `;
+    
     productList().forEach(item => {
       table += tableRow(item);
     });
@@ -67,7 +76,7 @@ const cartTotal = () => {
 // RESHAPE DATA TO RENDER TO DOM
 // .map()
 const productList = () => {
-  return [{ title: "SAMPLE TITLE", price: 44.00}]
+  return [{ title: "SAMPLE TITLE", price: "45.00", type: "SAMPLE TYPE" }]
 }
 
 
