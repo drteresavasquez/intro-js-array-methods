@@ -9,7 +9,7 @@ export const referenceList = [
     type: "info",
     description: "Historically black colleges and universities (HBCUs) are institutions of higher education in the United States that were established before the Civil Rights Act of 1964 with the intention of primarily serving the African-American community. Most of these institutions were founded in the years after the American Civil War and are concentrated in the Southern United States.",
     externalLink: "https://en.wikipedia.org/wiki/Historically_black_colleges_and_universities",
-    favorite: false
+    inCart: true
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const referenceList = [
     type: "biography",
     description: "Ted Poston, the first African American journalist to work at a mainstream newspaper, was born on July 4, 1906, in Hopkinsville, Kentucky.  His mother, Mollie Cox, died when he was ten and he was raised mostly by his eight older siblings, while his father, Ephraim, taught at the Kentucky State Industrial College for Negroes (now Kentucky State University) in Frankfurt, over two hundred miles away.",
     externalLink: "https://www.blackpast.org/african-american-history/poston-ted-1906-1974/",
-    favorite: true
+    inCart: true
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ export const referenceList = [
     type: "event",
     description: 'The Essence Festival, known as "the party with a purpose", is an annual music festival which started in 1995 as a one-time event to celebrate the 25th anniversary of Essence, a magazine aimed primarily towards African-American women. It became the largest African-American culture and music event in the United States.',
     externalLink: "https://www.essence.com/essence-festival-2022/",
-    favorite: false
+    inCart: false
   },
   {
     id: 4,
@@ -45,6 +45,6 @@ export const referenceList = [
     type: "App",
     description: "This app will get you excited about Black History! Play the game and get the highest score on the leaderboard.",
     externalLink: "https://blackhistorytrivia.netlify.app/",
-    favorite: false
+    inCart: false
   },
 ];

@@ -34,7 +34,7 @@ For this exercise, we will be working in the `scripts` directory.
 | type        | string      |
 | description | string      |
 | externalLink| string      |
-| favorite    | boolean     |
+| inCart      | boolean     |
 
 ### Sample Data
 ```javascript
@@ -49,7 +49,7 @@ const referenceList = [
     type: "info",
     description: "Historically black colleges and universities (HBCUs) are institutions of higher education.",
     externalLink: "https://en.wikipedia.org/wiki/Historically_black_colleges_and_universities",
-    favorite: false
+    inCart: false
   }
 ]
 ```
