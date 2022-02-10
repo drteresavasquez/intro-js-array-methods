@@ -10,7 +10,8 @@ const renderCards = (array) => {
   renderToDom("#cards", refStuff);
 }
 
-// .findIndex() & .includes()
+// UPDATE/ADD ITEMS TO CART
+// .findIndex() & (.includes() - string method)
 const toggleCart = (event) => {
   if (event.target.id.includes("fav-btn")) {
    console.log('Clicked Fav btn')
@@ -18,7 +19,7 @@ const toggleCart = (event) => {
 }
 
 // SEARCH
-// .includes() & .filter()
+// .filter()
 const search = (event) => {
   const eventLC = event.target.value.toLowerCase();
   console.log(eventLC)
@@ -57,7 +58,7 @@ const buttonFilter = (event) => {
 }
 
 // CALCULATE CART TOTAL
-// .reduce()
+// .reduce() & .some()
 const cartTotal = () => {
   const total = 0
   document.querySelector("#cartTotal").innerHTML = total.toFixed(2);
