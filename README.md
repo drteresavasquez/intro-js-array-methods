@@ -64,10 +64,3 @@ const referenceList = [
 
 ## Contributors
 [Dr. Teresa Vasquex (Dr T)](https://github.com/drteresavasquez)
-
-<style>
-  code {
-    white-space : pre-wrap !important;
-    word-break: break-word;
-  }
-</style>
