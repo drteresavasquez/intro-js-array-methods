@@ -44,7 +44,7 @@ const search = (event) => {
 }
 
 // BUTTON FILTER
-// .filter() & .reduce()
+// .filter() & .reduce() &.sort() - chaining
 const buttonFilter = (event) => {
   if(event.target.id.includes('free')) {
     const free = referenceList.filter(item => item.price <= 0);
@@ -73,7 +73,8 @@ const buttonFilter = (event) => {
     </thead>
     <tbody>
     `;
-    productList().forEach(item => {
+    productList().sort((a, b) => a.type.localeCompare(b.type))
+    .forEach(item => {
       table += tableRow(item);
     })
     table += `</tbody></table>`
