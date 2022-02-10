@@ -41,6 +41,20 @@ const buttonFilter = (event) => {
   if(event.target.id.includes('cartList')) {
     cartList();
   }
+  if(event.target.id.includes('productList')) {
+    let table = `<table class="table table-dark table-striped" style="width: 600px">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    `;
+    table += `</tbody></table>`
+
+    renderToDom('#cards', table);
+  }
   
 }
 
@@ -51,7 +65,7 @@ const cartTotal = () => {
 }
 
 // .map()
-const cartList = () => {
+const productList = () => {
   return console.log('Cart List!')
 }
 
