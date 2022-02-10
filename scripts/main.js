@@ -56,6 +56,7 @@ const buttonFilter = (event) => {
   
 }
 
+// CALCULATE CART TOTAL
 // .reduce()
 const cartTotal = () => {
   const total = 0
