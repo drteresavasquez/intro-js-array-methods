@@ -1,5 +1,9 @@
 # Intro to JS Array Methods 
+![ber](https://user-images.githubusercontent.com/29741570/153448974-41066273-2650-4c81-906c-ad8fc4a5a3c9.png)
+
 In this repo, we will be working through increasing knowledge in JS array methods by refactoring a Black Excellence Reference app.
+
+<a target="_blank" href="https://blackexcellenceref.netlify.app/">View Demo App</a>
 
 ## What are JS Array Methods? 👀
 Array methods are functions that are built-in to JavaScript that can be applied to arrays.
