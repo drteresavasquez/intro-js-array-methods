@@ -14,12 +14,12 @@ import { renderToDom } from "../utils/renderToDom.js";
 
 
 // ******* SAVE FOR CONNECTING IT ALL TOGETHER ******
-// const startApp = () => {
-//   let refStuff = "";
-//   referenceList.forEach((item) => {
-//     refStuff += card(item);
-//   });
+const startApp = () => {
+  let refStuff = "";
+  referenceList.forEach((item) => {
+    refStuff += card(item);
+  });
 
-//   renderToDom("#cards", refStuff);
-// }
-// startApp();
+  renderToDom("#cards", refStuff);
+}
+startApp();
