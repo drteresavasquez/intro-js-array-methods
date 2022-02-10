@@ -20,21 +20,20 @@
 <body>
   <div class="container mt-2 mb-5">
     <div id="cart" class="d-flex justify-content-end">
-      <h4 class="text-white text-center"><i class="fa fa-shopping-cart" style="font-size:30px;color:rgb(185, 73, 185)"></i> <span id="cartTotal">$0.00</span></h4>
+      <h4 class="text-white text-center"><i class="fa fa-shopping-cart" style="font-size:30px;color:rgb(185, 73, 185)"></i> $<span id="cartTotal">0.00</span></h4>
     </div>
     <div class="logo"><img src="./assets/images/ber.png" /></div>
 
     <div id="methodRow" class="methodRow">
       <div class="form-floating mb-3">
-        <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Search</label>
+        <input type="text" class="form-control" id="searchInput" placeholder="name@example.com">
+        <label for="searchInput">Search</label>
       </div>
       <div id="btnRow" class="d-flex justify-content-between mb-3 btnRow">
         <button id="free" class="btn btn-success w-100 m-1">FREE</button>
-        <button id="fav" class="btn btn-success w-100 m-1">CART</button>
+        <button id="cartFilter" class="btn btn-light w-100 m-1">CART</button>
         <button id="books" class="btn btn-light w-100 m-1">BOOKS</button>
-        <button id="info" class="btn btn-light w-100 m-1">INFO</button>
-        <button id="total" class="btn btn-secondary w-100 m-1">TOTAL</button>
+        <button id="clearFilter" class="btn btn-info w-100 m-1">CLEAR FILTER</button>
       </div>
     </div>
     <div id="cards" class="d-flex flex-wrap justify-content-center">
