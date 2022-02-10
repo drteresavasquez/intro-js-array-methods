@@ -55,12 +55,14 @@ const referenceList = [
 ```
 
 ### Array methods we will cover
-- `includes()`
+- `includes()` - string method
 - `filter()`
 - `map()`
 - `forEach()`
 - `reduce()`
 - `findIndex()`
+- `some()`
+- `sort()`
 
 ## Contributors
 [Dr. Teresa Vasquez (Dr T)](https://github.com/drteresavasquez)
