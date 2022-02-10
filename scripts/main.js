@@ -2,6 +2,7 @@ import { card } from "../components/card.js";
 import { referenceList } from "../data/reference.js";
 import { renderToDom } from "../utils/renderToDom.js";
 
+// .forEach()
 
 // .includes()
 
@@ -9,15 +10,16 @@ import { renderToDom } from "../utils/renderToDom.js";
 
 // .reduce()
 
+// .map()
 
 
 // ******* SAVE FOR CONNECTING IT ALL TOGETHER ******
-const startApp = () => {
-  let refStuff = "";
-  referenceList.forEach((item) => {
-    refStuff += card(item);
-  });
+// const startApp = () => {
+//   let refStuff = "";
+//   referenceList.forEach((item) => {
+//     refStuff += card(item);
+//   });
 
-  renderToDom("#cards", refStuff);
-}
-startApp();
+//   renderToDom("#cards", refStuff);
+// }
+// startApp();
