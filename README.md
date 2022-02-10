@@ -1,5 +1,7 @@
 # Intro to JS Array Methods 
-In this repo, we will be working through increasing knowledge in JS array methods by refactoring an app that is a compiled Black Excellence Reference.
+In this repo, we will be working through increasing knowledge in JS array methods by refactoring a Black Excellence Reference app.
+
+<a target="_blank" href="https://blackexcellenceref.netlify.app/">View Demo App</a>
 
 ## What are JS Array Methods? 👀
 Array methods are functions that are built-in to JavaScript that can be applied to arrays.
@@ -15,7 +17,7 @@ We are about to learn about a few array methods and then you are going to try so
 
 As we code along, make sure to take notes in the issue tickets that were created when you copied the repo so that you have something to come back to and reference at a later time.
 
-I will **NOT** be reviewing all the available array methods, and I will not go deeply into the algorithms. That is up to you and your learning as a software engineer. 
+I will **NOT** be reviewing all the methods, and I will not go deeply into the algorithms. That is up to you and your learning as a software engineer. 
 
 ## Let's look at what we got
 You will notice in the code, there are several directories with elements that make up the app. You are free to review those AFTER our class session, but they are not the focus of this learning.
