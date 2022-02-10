@@ -55,7 +55,7 @@ const referenceList = [
 ```
 
 ### Array methods we will cover
-- `includes()`
+- `some()`
 - `filter()`
 - `map()`
 - `forEach()`
