@@ -14,11 +14,11 @@ export const card = (object) => {
     >
       <h5 class="card-title">${object.title}</h5>
       <b>${object.price <= 0 ? 'FREE' : `$${object.price}`}</b><br />
-      ${object.inCart ? `<button id="fav-btn" type="button" class="btn">
-      <i class="fa fa-shopping-cart" style="color:gray;font-size:35px;"></i>
+      ${object.inCart ? `<button type="button" class="btn">
+      <i id="fav-btn--${object.id}" class="fa fa-shopping-cart" style="color:gray;font-size:35px;"></i>
     </button>` : 
-      `<button id="fav-btn" type="button" class="btn">
-        <i class="fa fa-cart-plus" style="color:purple;font-size:35px;"></i>
+      `<button type="button" class="btn">
+        <i id="fav-btn--${object.id}" class="fa fa-cart-plus" style="color:purple;font-size:35px;"></i>
       </button>`}
       <p class="card-text">${object.author}<br />
       <small class="text-muted">${object.type.toUpperCase()}</small>
