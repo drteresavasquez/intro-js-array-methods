@@ -14,7 +14,8 @@ const renderCards = (array) => {
   renderToDom("#cards", refStuff);
 }
 
-// .findIndex() & .includes()
+// UPDATE/ADD ITEMS TO CART
+// .findIndex() & (.includes() - string method)
 const toggleCart = (event) => {
   if (event.target.id.includes("fav-btn")) {
     // GOOGLE: Destructuring assignment
@@ -30,7 +31,7 @@ const toggleCart = (event) => {
 }
 
 // SEARCH
-// .includes() & .filter()
+// .filter()
 const search = (event) => {
   const eventLC = event.target.value.toLowerCase();
   const searchResult = referenceList.filter(item => 
@@ -66,6 +67,7 @@ const buttonFilter = (event) => {
     <thead>
       <tr>
         <th scope="col">Title</th>
+        <th scope="col">Type</th>
         <th scope="col">Price</th>
       </tr>
     </thead>
@@ -80,16 +82,24 @@ const buttonFilter = (event) => {
   }
 }
 
-// .reduce()
+// CALCULATE CART TOTAL
+// .reduce() & .some()
 const cartTotal = () => {
   const cart = referenceList.filter(item => item.inCart);
   const total = cart.reduce((a,b) => a + b.price, 0);
+  const freeItems = cart.some(item => item.price <= 0)
   document.querySelector("#cartTotal").innerHTML = total.toFixed(2);
+
+  if (freeItems) {
+    document.querySelector("#includes-free").innerHTML = 'INCLUDES FREE ITEMS';
+  } else {
+    document.querySelector("#includes-free").innerHTML = '';
+  }
 }
 
 // .map()
 const productList = () => {
-  return referenceList.map(item => ({ title: item.title, price: item.price}));
+  return referenceList.map(item => ({ title: item.title, price: item.price, type: item.type }));
 }
 
 
