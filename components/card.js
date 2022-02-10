@@ -18,7 +18,7 @@ export const card = (object) => {
       <i id="fav-btn--${object.id}" class="fa fa-shopping-cart" style="color:gray;font-size:35px;"></i>
     </button>` : 
       `<button type="button" class="btn">
-        <i id="fav-btn--${object.id}" class="fa fa-cart-plus" style="color:purple;font-size:35px;"></i>
+        <i id="fav-btn--${object.id}" class="fa fa-cart-plus" style="color:plum;font-size:35px;"></i>
       </button>`}
       <p class="card-text">${object.author}<br />
       <small class="text-muted">${object.type.toUpperCase()}</small>
