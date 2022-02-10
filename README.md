@@ -60,6 +60,7 @@ const referenceList = [
 - `map()`
 - `forEach()`
 - `reduce()`
+- `findIndex()`
 
 ## Contributors
 [Dr. Teresa Vasquez (Dr T)](https://github.com/drteresavasquez)
